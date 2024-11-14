@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <title>Agregar</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="estilos/agrega.css">
+ <script type="module" src="lib/js/submitForm.js"></script>
+ <script type="module" src="lib/js/muestraError.js"></script>
+</head>
+
+<body class="container mt-5">
+
+ <form class="card p-4 shadow" onsubmit="submitForm('srv/alumno-agrega.php', event)
+    .then(modelo => location.href = 'index.html')
+    .catch(muestraError)">
+
+  <h1 class="text-center mb-4">Agregar Alumno</h1>
+
+  <p class="text-right">
+   <a href="index.html" class="btn btn-secondary">Cancelar</a>
+  </p>
+
+  <div class="form-group">
+   <label for="nombre">Nombre(s) <span class="text-danger">*</span></label>
+   <input type="text" class="form-control" id="nombre" name="nombre" >
+  </div>
+
+  <div class="form-group">
+    <label for="apellido_p">Apellido P <span class="text-danger">*</span></label>
+    <input type="text" class="form-control" id="apellido_p" name="apellido_p" >
+  </div>
+
+  <div class="form-group">
+    <label for="apellido_m">Apellido M <span class="text-danger">*</span></label>
+    <input type="text" class="form-control" id="apellido_m" name="apellido_m" >
+  </div>
+
+  <div class="form-group">
+    <label for="matricula">Matricula <span class="text-danger">*</span></label>
+    <input type="text" class="form-control" id="matricula" name="matricula" >
+  </div>
+
+  <div class="form-group">
+    <label for="carrera">Carrera <span class="text-danger">*</span></label>
+    <input type="text" class="form-control" id="carrera" name="carrera" >
+  </div>
+
+  <div class="text-center">
+   <button type="submit" class="btn btn-primary">Agregar</button>
+  </div>
+
+ </form>
+
+ <!-- Bootstrap JS y dependencias -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
